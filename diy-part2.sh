@@ -23,7 +23,7 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 # for i in $GITHUB_WORKSPACE/patches/*.patch; do patch --fuzz 3 -p0 < $i; done
 
 # Set permissions
-chmod +x package/feeds/helloworld/luci-app-ssr-plus/root/etc/ssrplus/iptables_config.sh
+# chmod +x package/feeds/helloworld/luci-app-ssr-plus/root/etc/ssrplus/iptables_config.sh
 
 #修改保留内存到1M
 sed -i '/vm.min_free_kbytes=/d' /etc/sysctl.conf
