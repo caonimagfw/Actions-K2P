@@ -79,6 +79,9 @@ jobs:
 
     - name: Before upload
       run: |
+        cd openwrt
+        echo -e 'CONFIG_DEVEL=y\nCONFIG_CCACHE=y' >> .config
+        make defconfig && cd ..
         mkdir openwrt/_config
         cp openwrt/.config openwrt/_config
 
