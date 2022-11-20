@@ -86,10 +86,10 @@ jobs:
     - name: Install feeds
       run: |
         cd openwrt && ./scripts/feeds install libpam
-        cd openwrt && ./scripts/feeds install liblzma
-        cd openwrt && ./scripts/feeds install libnetsnmp
-        cd openwrt && ./scripts/feeds install packages
-        cd openwrt && ./scripts/feeds install -a
+        ./scripts/feeds install liblzma
+        ./scripts/feeds install libnetsnmp
+        ./scripts/feeds install packages
+        ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
