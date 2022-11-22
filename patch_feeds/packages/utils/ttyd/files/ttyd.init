@@ -70,7 +70,6 @@ ttyd_instance()
 		${max_clients:+-m $max_clients} \
 		${once:+-o} \
 		${index:+-I $index} \
-		${ipv6:+-6} \
 		${debug:+-d $debug}
 	config_list_foreach "$1" client_option "procd_append_param command -t"
 	procd_append_param command $command
