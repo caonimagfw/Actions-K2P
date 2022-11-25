@@ -68,9 +68,12 @@ jobs:
         echo commit: $(cd openwrt; git rev-parse HEAD)
 
     - name: cache
-      uses: w311angg/cachewrtbuild@main
+      uses: caonimagfw/cachewrtbuild@main
       with:
-        ccache: true
+        ccache: false
+        toolchain: true
+        skip: true
+        clean: false
         prefix: ${{ github.workspace }}/openwrt
 
     - name: Load custom feeds
